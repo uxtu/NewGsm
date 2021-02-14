@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.TreeSet;
 
-public class SortCars100 implements Comparator<Cars> {
+public class SortCars100 implements Comparator<Cars> { // сортировка пробега по возрастанию
 
     @Override
     public int compare(Cars o1, Cars o2) {
@@ -24,7 +24,7 @@ public class SortCars100 implements Comparator<Cars> {
             System.out.println(a.type + " " + a.number + " " + a.mileage);
     }
 
-public static class SortDescrease extends SortCars100 implements Comparator<Cars> {
+public static class SortDescrease extends SortCars100 implements Comparator<Cars> { // сортировка пробега по убыванию
     @Override
     public int compare(Cars o1, Cars o2) {
         return Integer.parseInt(o2.mileage) - Integer.parseInt(o1.mileage);

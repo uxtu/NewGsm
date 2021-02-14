@@ -14,9 +14,9 @@ public class DataFile {
     c300_1-120-30,
     ...
      */
-    final static String path = "C:\\Users\\uxtu\\IdeaProjects\\auto.txt";
+    final static String path = "C:\\Users\\uxtu\\IdeaProjects\\auto.txt"; // пример файла есть в проекте
 
-    public ArrayList<String> read() throws IOException {
+    public ArrayList<String> read() throws IOException { // считываем строки из файла для далнейших манипуляций
         BufferedReader reader = new BufferedReader(new FileReader(path));
         String str;
         ArrayList<String> lines = new ArrayList<String>();

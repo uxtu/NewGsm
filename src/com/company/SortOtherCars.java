@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.TreeSet;
 
-public class SortOtherCars implements Comparator<CarsWithParametrs> {
+public class SortOtherCars implements Comparator<CarsWithParametrs> { // сортировка пробега по возрастанию
     @Override
     public int compare(CarsWithParametrs o1, CarsWithParametrs o2) {
         return Integer.parseInt(o1.mileage) - Integer.parseInt(o2.mileage);
@@ -23,7 +23,7 @@ public class SortOtherCars implements Comparator<CarsWithParametrs> {
         for(CarsWithParametrs a : c)
             System.out.println(a.type + " " + a.number + " " + a.mileage + " " + a.parametr);
     }
-    public static class SortDescrease extends SortOtherCars implements Comparator<CarsWithParametrs>{
+    public static class SortDescrease extends SortOtherCars implements Comparator<CarsWithParametrs>{ // сортировка пробега по убыванию
         @Override
         public int compare(CarsWithParametrs o1, CarsWithParametrs o2) {
             return Integer.parseInt(o2.mileage) - Integer.parseInt(o1.mileage);
@@ -39,7 +39,7 @@ public class SortOtherCars implements Comparator<CarsWithParametrs> {
 
     }
 
-    public static class SortParametr extends SortOtherCars implements Comparator<CarsWithParametrs>{
+    public static class SortParametr extends SortOtherCars implements Comparator<CarsWithParametrs>{// сортировка параметра по возрастанию
         @Override
         public int compare(CarsWithParametrs o1, CarsWithParametrs o2) {
             return Integer.parseInt(o1.parametr) - Integer.parseInt(o2.parametr);
@@ -55,7 +55,7 @@ public class SortOtherCars implements Comparator<CarsWithParametrs> {
 
     }
 
-    public static class SortParametrDescrease extends SortOtherCars implements Comparator<CarsWithParametrs>{
+    public static class SortParametrDescrease extends SortOtherCars implements Comparator<CarsWithParametrs>{ // сортировка параметра по убыванию
         @Override
         public int compare(CarsWithParametrs o1, CarsWithParametrs o2) {
             return Integer.parseInt(o2.parametr) - Integer.parseInt(o1.parametr);
