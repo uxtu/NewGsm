@@ -8,7 +8,7 @@ public class Auth extends DataFile{
 
     final static String usersFile = src + "users.txt";
 
-    /*Проверка пользователя на авторизации админ = admin/123 юзер = tmp/Tmp!123 */
+    /*Проверка пользователя на авторизации админ = admin/admin123 юзер = tmp/Tmp!123 */
     public boolean checkUser(String login, String password) throws IOException, FileNotFoundException {
         BufferedReader reader = new BufferedReader(new FileReader(usersFile));
         String str;
