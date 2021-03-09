@@ -1,0 +1,3 @@
+Petrov c300_1 150
+Sidorov c400_2 63
+Pupkin c200_4 90

@@ -1,0 +1,6 @@
+Ivanov c100_2 40
+Petrov c300_1 20
+Sidorov c400_2 45
+Pupkin c200_4 92
+Koleso c400_1 28
+Cvetkov c100_4 42

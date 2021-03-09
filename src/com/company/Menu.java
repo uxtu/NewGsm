@@ -1,10 +1,14 @@
 package com.company;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.TreeSet;
 
 public class Menu {
+
     private void showMenu(){
         System.out.println("---------GSM---------\nВыберите действие:\n" +
                 "1. Общее кол-во расходов\n" +
@@ -43,18 +47,18 @@ public class Menu {
 
         return ans;
     }
-    public void show(ArrayList<String> out){
+    public void show(ArrayList<String> out) throws InputMismatchException {
         boolean  ans = true;
         int v;
         while(ans) {
             ArrayList<Cars> c = new ArrayList<>();
             ArrayList<CarsWithParametrs> d = new ArrayList<>();
             showMenu();
-            Scanner in = new Scanner(System.in);
+            Scanner in = new Scanner(System.in) ;
             v = in.nextInt();
             if(v == 0){
                 System.out.println("Bye bye");
-                ans = false;
+                System.exit(0);
             }
             else if(v == 1){
                 DataPrepare dp = new DataPrepare();
@@ -137,9 +141,11 @@ public class Menu {
                         TreeSet<CarsWithParametrs> t = s.init(d, s);
                         s.show(t);
                     }
-                    else System.out.println("Invalid input");
+                    else System.out.println("Invalid input sort");
                 }
             }
+            else if(v < 0 | v > 4)
+                System.out.println("Invalid input menu");
             ans = next();
         }
     }
